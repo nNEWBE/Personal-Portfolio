@@ -283,7 +283,7 @@ export const Highlight = ({
         backgroundPosition: "left center",
       }}
       className={cn(
-        `relative text-sm sm:text-xl w-fit rounded-lg bg-gradient-to-r from-[#ffaa40] to-[#9c40ff] px-1 pb-1 dark:from-[#ffaa40] dark:to-[#9c40ff]`,
+        `relative text-xs sm:text-xl w-fit rounded-lg bg-gradient-to-r from-[#ffaa40] to-[#9c40ff] px-1 pb-1 dark:from-[#ffaa40] dark:to-[#9c40ff]`,
         className
       )}
     >

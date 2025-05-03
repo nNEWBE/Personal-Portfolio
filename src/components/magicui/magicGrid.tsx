@@ -7,8 +7,8 @@ export function GridPatternLinearGradient() {
   return (
     <div className="relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20">
       <GridPattern
-        width={40}
-        height={40}
+        width={70}
+        height={70}
         x={0}
         y={0}
         className={cn(

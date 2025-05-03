@@ -10,7 +10,7 @@ const Project = () => {
         <TextGenerateEffect words="MY PROJECTS" />
       </div>
       <LensDemo />
-      <Link href="/products" className="flex justify-center">
+      <Link href="/projects" className="flex justify-center">
         <ShimmerButtonDemo text="View All" />
       </Link>
     </div>

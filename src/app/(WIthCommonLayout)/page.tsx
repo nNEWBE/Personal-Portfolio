@@ -1,5 +1,6 @@
 import About from "@/components/combined/About";
 import Blog from "@/components/combined/Blog";
+import Footer from "@/components/combined/Footer";
 import Project from "@/components/combined/Project";
 import Skills from "@/components/combined/Skills";
 // import MagicCardDemo from "@/components/magicui/magicCard";
@@ -9,6 +10,7 @@ import HeroHighlightDemo from "@/components/ui/acHero";
 // import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 // import { testimonials } from "@/utils";
 import { ClientOnly } from "@/utils/ClientOnly";
+import Link from "next/link";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 export default function Home() {
@@ -16,12 +18,18 @@ export default function Home() {
     <div>
       <div className="fixed z-50 w-full mt-3">
         <div className="flex justify-between max-w-[97rem] mx-auto px-5 py-2">
-          <h1 className="sm:text-2xl text-xl  font-lobster px-3 py-2 border cursor-pointer rounded-xl backdrop-blur-md ">
+          <Link
+            href="/"
+            className="sm:text-2xl text-xl  font-lobster px-3 py-2 border cursor-pointer rounded-xl backdrop-blur-md "
+          >
             Shuvo.
-          </h1>
-          <h1 className="sm:text-2xl text-xl  font-lobster px-3 py-2 border cursor-pointer rounded-xl backdrop-blur-md ">
+          </Link>
+          <Link
+            href="/projects"
+            className="sm:text-2xl text-xl  font-lobster px-3 py-2 border cursor-pointer rounded-xl backdrop-blur-md "
+          >
             Projects
-          </h1>
+          </Link>
         </div>
       </div>
 
@@ -35,6 +43,7 @@ export default function Home() {
         {/* <MarqueeDemo /> */}
         <Project />
         <Blog />
+        <Footer />
       </ClientOnly>
     </div>
   );

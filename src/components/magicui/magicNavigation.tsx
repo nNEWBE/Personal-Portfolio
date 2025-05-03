@@ -1,9 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { HomeIcon } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
-
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MdOutlinePerson } from "react-icons/md";
@@ -45,8 +45,36 @@ const DATA = {
 };
 
 export default function DockDemo() {
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setVisible(true);
+      } else {
+        // Scrolling up
+        setVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="flex flex-col fixed w-full z-50  bottom-5 items-center justify-center">
+    <div
+      className={cn(
+        "transition-all duration-500 flex flex-col fixed w-full z-50 bottom-5 items-center justify-center",
+        visible ? "translate-y-0" : "translate-y-20 pointer-events-none"
+      )}
+    >
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
