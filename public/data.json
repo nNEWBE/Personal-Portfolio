@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "As Mart",
+    "description": "An e-commerce website for browsing and purchasing a variety of products with a smooth user interface.",
+    "imageURL": "https://res.cloudinary.com/dorjgyfdl/image/upload/v1746268538/As-Mart_pwlel9.png",
+    "technologyUsed": [
+      "Next.js",
+      "Tailwind",
+      "TypeScript",
+      "MongoDB",
+      "Express"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "iLuxe Shop",
+    "description": "A premium e-commerce platform featuring cart management, secure checkout, and Stripe payment integration.",
+    "imageURL": "https://res.cloudinary.com/dorjgyfdl/image/upload/v1746268538/iLuxe-Shop_djmrqq.png",
+    "technologyUsed": ["React", "Tailwind", "TypeScript", "MongoDB", "Express"]
+  },
+  {
+    "id": 3,
+    "name": "Study Mate",
+    "description": "An educational platform for submitting and reviewing assignments, designed to streamline academic workflows.",
+    "imageURL": "https://res.cloudinary.com/dorjgyfdl/image/upload/v1746268538/Study-Mate_iwztvz.png",
+    "technologyUsed": ["React", "Tailwind", "Express", "MongoDB"]
+  }
+]

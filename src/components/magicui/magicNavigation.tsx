@@ -88,7 +88,7 @@ const DATA = {
 
 export default function DockDemo() {
   return (
-    <div className="flex flex-col fixed w-full z-50 sm:bottom-10 bottom-5 items-center justify-center">
+    <div className="flex flex-col fixed w-full z-50  bottom-5 items-center justify-center">
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (

@@ -72,7 +72,6 @@ export default function AnimatedBeamDemo() {
         </div>
       </div>
 
-      {/* Animated beams */}
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div1Ref}
