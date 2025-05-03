@@ -4,7 +4,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 const Skills = () => {
   return (
-    <div className="relative">
+    <div id="Expertise" className="relative">
       <div className="flex justify-center">
         <TextGenerateEffect words="MY EXPERTISE" />
       </div>

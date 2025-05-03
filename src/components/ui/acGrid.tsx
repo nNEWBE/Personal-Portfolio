@@ -8,7 +8,7 @@ import profile from "../../assets/Github DP.jpg";
 import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
-function ShimmerButtonDemo({ text }: { text: string }) {
+export function ShimmerButtonDemo({ text }: { text: string }) {
   return (
     <ShimmerButton className="shadow-2xl">
       <span className="whitespace-pre-wrap font-poppins text-center text-sm font-medium leading-none tracking-tight dark:to-slate-900/10">
@@ -146,16 +146,30 @@ const GridItemForProfile = ({
                 {description}
               </h2>
               <div className="flex gap-2 items-center">
-                <div className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/shuvo.chandra.3745"
+                  className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2"
+                >
                   <FaFacebookSquare className="h-4 w-4 text-black dark:text-neutral-400" />
-                </div>
-                <div className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2">
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/shuvochandra/"
+                  className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2"
+                >
                   <FaLinkedin className="h-4 w-4 text-black dark:text-neutral-400" />
-                </div>
-                <div className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2">
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/nNEWBE"
+                  className="w-fit cursor-pointer rounded-lg border border-gray-600 p-2"
+                >
                   <FaGithub className="h-4 w-4 text-black dark:text-neutral-400" />
-                </div>
-                <ShimmerButtonDemo text="Resume" />
+                </a>
+                <a href="https://docs.google.com/document/d/1TCgrx0fquB7OzCsnyUaDgI5En3QBQY2BBKTbIOVFvHg/edit?usp=sharing">
+                  <ShimmerButtonDemo text="Resume" />
+                </a>
               </div>
             </div>
           </div>

@@ -1,9 +1,10 @@
+import About from "@/components/combined/About";
+import Blog from "@/components/combined/Blog";
+import Project from "@/components/combined/Project";
 import Skills from "@/components/combined/Skills";
 // import MagicCardDemo from "@/components/magicui/magicCard";
-import LensDemo from "@/components/magicui/magicLenseCard";
 // import MarqueeDemo from "@/components/magicui/magicMarquee";
 import DockDemo from "@/components/magicui/magicNavigation";
-import GlowingEffectDemoSecond from "@/components/ui/acGrid";
 import HeroHighlightDemo from "@/components/ui/acHero";
 // import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 // import { testimonials } from "@/utils";
@@ -28,11 +29,12 @@ export default function Home() {
         <HeroHighlightDemo />
         {/* <AnimatedTestimonials testimonials={testimonials} /> */}
         <DockDemo />
-        <GlowingEffectDemoSecond />
+        <About />
         {/* <MagicCardDemo /> */}
         <Skills />
         {/* <MarqueeDemo /> */}
-        <LensDemo />
+        <Project />
+        <Blog />
       </ClientOnly>
     </div>
   );

@@ -56,7 +56,10 @@ export const projects = [
 
 export default function LensDemo() {
   return (
-    <div className="grid grid-cols-1 sm:mx-10 mx-3 gap-5 my-10 sm:grid-cols-2 md:grid-cols-3">
+    <div
+      id="Projects"
+      className="grid grid-cols-1 sm:mx-10 mx-3 gap-5 my-10 sm:grid-cols-2 md:grid-cols-3"
+    >
       {projects.map((project: any) => (
         <Card
           key={project.id}
