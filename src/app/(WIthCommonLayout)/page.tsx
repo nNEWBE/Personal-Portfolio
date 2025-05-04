@@ -3,8 +3,6 @@ import Blog from "@/components/combined/Blog";
 import Footer from "@/components/combined/Footer";
 import Project from "@/components/combined/Project";
 import Skills from "@/components/combined/Skills";
-// import MagicCardDemo from "@/components/magicui/magicCard";
-// import MarqueeDemo from "@/components/magicui/magicMarquee";
 import DockDemo from "@/components/magicui/magicNavigation";
 import HeroHighlightDemo from "@/components/ui/acHero";
 // import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
@@ -38,9 +36,7 @@ export default function Home() {
         {/* <AnimatedTestimonials testimonials={testimonials} /> */}
         <DockDemo />
         <About />
-        {/* <MagicCardDemo /> */}
         <Skills />
-        {/* <MarqueeDemo /> */}
         <Project />
         <Blog />
         <Footer />

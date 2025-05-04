@@ -42,7 +42,7 @@ export default function SharedBackgroundCards() {
   return (
     <div
       ref={containerRef}
-      className="relative grid grid-cols-1 sm:mx-10 mx-3 sms:grid-cols-2 sml:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 py-10"
+      className="relative grid grid-cols-1 sm:mx-10 mx-3 sms:grid-cols-2 sml:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 pb-10"
     >
       <motion.div
         className="absolute z-0 rounded-2xl bg-zinc-100 dark:bg-slate-800/[0.8] shadow-xl border border-zinc-300/40 dark:border-zinc-600/30 backdrop-blur-md"

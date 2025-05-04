@@ -5,8 +5,8 @@ import { ShimmerButtonDemo } from "../ui/acGrid";
 
 const Project = () => {
   return (
-    <div id="Projects" className="relative">
-      <div className="flex justify-center">
+    <div id="Projects" className="relative my-10">
+      <div className="flex justify-center mb-20">
         <TextGenerateEffect words="MY PROJECTS" />
       </div>
       <LensDemo />

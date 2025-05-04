@@ -16,6 +16,7 @@ import typescript from "../../assets/typescript.svg";
 import dp from "../../assets/Github DP.jpg";
 import Image, { StaticImageData } from "next/image";
 
+// Circle component
 const Circle = forwardRef<
   HTMLDivElement,
   { className?: string; children: StaticImageData }
@@ -24,7 +25,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-12 sm:size-14 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex size-16 md:size-20 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -39,45 +40,55 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
+// Main component
 export default function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);
   const div3Ref = useRef<HTMLDivElement>(null);
-  const div4Ref = useRef<HTMLDivElement>(null);
+  const div4Ref = useRef<HTMLDivElement>(null); // profile
   const div5Ref = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
   const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
     <div
-      className="relative flex h-[350px] w-full items-center justify-center overflow-hidden p-10"
       ref={containerRef}
+      className="relative w-full h-[500px] flex items-center justify-center"
     >
-      <div className="flex size-full max-h-[300px] max-w-lg flex-col items-stretch justify-between gap-10">
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div1Ref}>{Icons.nextjs}</Circle>
-          <Circle ref={div5Ref}>{Icons.react}</Circle>
-        </div>
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div2Ref}>{Icons.redux}</Circle>
-          <Circle ref={div4Ref} className="sm:size-24 size-16">
-            {Icons.profile}
-          </Circle>
-          <Circle ref={div6Ref}>{Icons.mongodb}</Circle>
-        </div>
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div3Ref}>{Icons.mongoose}</Circle>
-          <Circle ref={div7Ref}>{Icons.express}</Circle>
-        </div>
+      <div ref={div4Ref} className="absolute z-20">
+        <Circle className="size-28 md:size-32">{Icons.profile}</Circle>
       </div>
 
+      <div className="absolute top-5 left-1/2 -translate-x-1/2 z-20">
+        <Circle ref={div1Ref}>{Icons.nextjs}</Circle>
+      </div>
+
+      <div className="absolute top-1/4 md:left-32 left-5 sm:left-10 z-20">
+        <Circle ref={div2Ref}>{Icons.redux}</Circle>
+      </div>
+
+      <div className="absolute bottom-10 md:left-1/4 sm:left-20 left-7 z-20">
+        <Circle ref={div3Ref}>{Icons.mongoose}</Circle>
+      </div>
+
+      <div className="absolute top-1/4 md:right-32 right-5 sm:right-10 z-20">
+        <Circle ref={div5Ref}>{Icons.react}</Circle>
+      </div>
+
+      <div className="absolute bottom-10 md:right-1/4 sm:right-20 right-7 z-20">
+        <Circle ref={div6Ref}>{Icons.mongodb}</Circle>
+      </div>
+
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
+        <Circle ref={div7Ref}>{Icons.express}</Circle>
+      </div>
+
+      {/* Animated Beams */}
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={div4Ref}
-        curvature={-75}
-        endYOffset={-10}
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -88,15 +99,11 @@ export default function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div4Ref}
-        curvature={75}
-        endYOffset={10}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div5Ref}
         toRef={div4Ref}
-        curvature={-75}
-        endYOffset={-10}
         reverse
       />
       <AnimatedBeam
@@ -109,14 +116,13 @@ export default function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div7Ref}
         toRef={div4Ref}
-        curvature={75}
-        endYOffset={10}
         reverse
       />
     </div>
   );
 }
 
+// Icon assets
 const Icons = {
   nextjs: nextjs,
   typescript: typescript,
