@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --breakpoint-sml: 75rem;
+  --breakpoint-sms: 31.25rem;
+}
+
 @theme inline {
   --font-lobster: var(--font-lobster);
   --font-madimi: var(--font-madimi);

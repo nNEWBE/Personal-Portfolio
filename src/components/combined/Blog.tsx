@@ -1,7 +1,7 @@
 import Link from "next/link";
-import BlogsLensDemo from "../magicui/magicBlogCard";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { ShimmerButtonDemo } from "../ui/acGrid";
+import SharedBackgroundCards from "../ui/mpCard";
 
 const Blog = () => {
   return (
@@ -9,7 +9,7 @@ const Blog = () => {
       <div className="flex justify-center">
         <TextGenerateEffect words="MY Blogs" />
       </div>
-      <BlogsLensDemo />
+      <SharedBackgroundCards />
       <Link href="/blogs" className="flex justify-center">
         <ShimmerButtonDemo text="View All" />
       </Link>

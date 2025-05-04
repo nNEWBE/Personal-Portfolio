@@ -51,13 +51,16 @@ export default function DockDemo() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const bannerHeight = document.getElementById("Home")?.offsetHeight || 300; // Fallback height if #Home not found
 
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        setVisible(true);
+      if (currentScrollY > bannerHeight) {
+        if (currentScrollY > lastScrollY) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
       } else {
-        // Scrolling up
-        setVisible(false);
+        setVisible(true);
       }
 
       setLastScrollY(currentScrollY);

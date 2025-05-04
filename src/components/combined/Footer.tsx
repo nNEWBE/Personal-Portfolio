@@ -38,7 +38,7 @@ const footerLinks: FooterLink[] = [
 
 const Footer = () => {
   return (
-    <div className="relative mt-10 lg:h-[26rem] sm:h-[40rem] h-[44rem]">
+    <div className="relative mt-10 lg:h-[22rem] h-[38rem] ">
       <GridPatternLinearGradient />
       <div className="absolute top-16 w-full">
         <div className="relative z-10 mx-4 flex flex-col items-center justify-center gap-12 lg:gap-32 text-center lg:mx-10 lg:flex-row lg:items-center lg:justify-center lg:text-left">
@@ -95,8 +95,9 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="py-5 text-center font-poppins text-neutral-400 text-xs sm:text-base">
-          &copy; {new Date().getFullYear()} Shuvo Chandra Deb Nath. All rights
+        <p className="p-3 text-center font-poppins text-neutral-400 text-xs sm:text-base">
+          &copy; {new Date().getFullYear()} Shuvo{" "}
+          <span className="hidden sm:inline">Chandra Deb Nath</span>. All rights
           reserved.
         </p>
       </div>
