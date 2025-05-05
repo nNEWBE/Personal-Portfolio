@@ -1,4 +1,9 @@
-import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaExternalLinkSquareAlt,
+  FaFacebookSquare,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { GridPatternLinearGradient } from "../magicui/magicGrid";
 import { Highlight } from "../ui/hero-highlight";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
@@ -62,7 +67,9 @@ const Footer = () => {
                     href={link.href}
                     rel="noopener noreferrer"
                   >
-                    <ShimmerButtonDemo text="Resume" />
+                    <ShimmerButtonDemo text="Resume">
+                      <FaExternalLinkSquareAlt className="dark:text-neutral-400 inline text-black ml-2" />
+                    </ShimmerButtonDemo>
                   </a>
                 ))}
             </div>

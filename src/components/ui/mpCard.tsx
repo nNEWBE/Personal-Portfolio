@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./card";
+import { Card, CardContent, CardHeader, CardTitle } from "./card";
 import { Lens } from "../magicui/lens";
-import { BsCursorFill } from "react-icons/bs";
+// import { BsCursorFill } from "react-icons/bs";
 import { blogs } from "@/utils";
 
 export default function SharedBackgroundCards() {
@@ -88,13 +88,13 @@ export default function SharedBackgroundCards() {
             <CardContent className="text-center">
               <CardTitle className="text-xl">{blog.title}</CardTitle>
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <div></div>
               <a className="text-sm font-madimi flex items-center gap-1 cursor-pointer text-gray-500">
                 <p>View Details </p>
                 <BsCursorFill />
               </a>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </div>
       ))}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import LensDemo from "../magicui/magicLenseCard";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { ShimmerButtonDemo } from "../ui/acGrid";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 const Project = () => {
   return (
@@ -11,7 +12,9 @@ const Project = () => {
       </div>
       <LensDemo />
       <Link href="/projects" className="flex justify-center">
-        <ShimmerButtonDemo text="View All" />
+        <ShimmerButtonDemo text="View All">
+          <FaExternalLinkSquareAlt className="dark:text-neutral-400 inline text-black ml-2" />
+        </ShimmerButtonDemo>
       </Link>
     </div>
   );

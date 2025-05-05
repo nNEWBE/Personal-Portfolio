@@ -5,14 +5,26 @@ import { Box, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Image from "next/image";
 import profile from "../../assets/Github DP.jpg";
-import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaExternalLinkSquareAlt,
+  FaFacebookSquare,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
-export function ShimmerButtonDemo({ text }: { text: string }) {
+export function ShimmerButtonDemo({
+  text,
+  children,
+}: {
+  text: string;
+  children?: React.ReactNode;
+}) {
   return (
     <ShimmerButton className="shadow-2xl">
       <span className="whitespace-pre-wrap font-poppins text-center text-sm font-medium leading-none tracking-tight dark:to-slate-900/10">
         {text}
+        {children}
       </span>
     </ShimmerButton>
   );
@@ -168,7 +180,9 @@ const GridItemForProfile = ({
                   <FaGithub className="h-4 w-4 text-black dark:text-neutral-400" />
                 </a>
                 <a href="https://docs.google.com/document/d/1TCgrx0fquB7OzCsnyUaDgI5En3QBQY2BBKTbIOVFvHg/edit?usp=sharing">
-                  <ShimmerButtonDemo text="Resume" />
+                  <ShimmerButtonDemo text="Resume">
+                    <FaExternalLinkSquareAlt className="dark:text-neutral-400 inline text-black ml-2" />
+                  </ShimmerButtonDemo>
                 </a>
               </div>
             </div>
