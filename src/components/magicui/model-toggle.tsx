@@ -50,14 +50,14 @@ export const ModeToggle = React.forwardRef<
         >
           <SunIcon
             className={cn(
-              "size-[1.2rem] text-neutral-800 dark:hidden dark:text-neutral-200",
+              "size-[1.2rem] text-neutral-800 hidden dark:block dark:text-neutral-200",
               "transition-transform duration-200",
               isRotated && "rotate-[180deg]"
             )}
           />
           <MoonIcon
             className={cn(
-              "hidden size-[1.2rem] text-neutral-800 dark:block dark:text-neutral-200",
+              "dark:hidden size-[1.2rem] text-neutral-800  dark:text-neutral-200",
               "transition-transform duration-200",
               isRotated && "rotate-[180deg]"
             )}

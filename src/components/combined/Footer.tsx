@@ -36,7 +36,7 @@ const footerLinks: FooterLink[] = [
   },
   {
     name: "Resume",
-    href: "https://docs.google.com/document/d/1TCgrx0fquB7OzCsnyUaDgI5En3QBQY2BBKTbIOVFvHg/edit?usp=sharing",
+    href: "https://drive.google.com/file/d/1u8dzqDtqkXWpm1CF_7cQVwDur3vN5TbT/view?usp=sharing",
     isButton: true,
   },
 ];

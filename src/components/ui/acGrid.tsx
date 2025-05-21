@@ -179,7 +179,10 @@ const GridItemForProfile = ({
                 >
                   <FaGithub className="h-4 w-4 text-black dark:text-neutral-400" />
                 </a>
-                <a href="https://docs.google.com/document/d/1TCgrx0fquB7OzCsnyUaDgI5En3QBQY2BBKTbIOVFvHg/edit?usp=sharing">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1u8dzqDtqkXWpm1CF_7cQVwDur3vN5TbT/view?usp=sharing"
+                >
                   <ShimmerButtonDemo text="Resume">
                     <FaExternalLinkSquareAlt className="dark:text-neutral-400 inline text-black ml-2" />
                   </ShimmerButtonDemo>

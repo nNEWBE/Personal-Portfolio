@@ -22,7 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "SHUVO | Portfolio",
+  title: "SHUVO || PORTFOLIO",
   description: "A personal website",
 };
 
